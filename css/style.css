@@ -1,0 +1,380 @@
+/* tipografias */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+
+
+/* variables */
+:root{
+    --color-principal: #181818;
+    --titulos: 90px;
+    --secundarios: 30px;
+    --terciarios: 15px;
+}
+
+h2{
+    background-image: linear-gradient(to right, #ED1C1C, #FF9635);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Righteous', cursive;
+    animation: color-transition 4s linear infinite;
+}
+
+p{
+    font-size: var(--terciarios);
+    color: #ffffff;
+    font-family: 'Righteous', cursive;
+}
+
+@keyframes color-transition {
+    0% {
+        color: #e94412; /* Comienza con el primer color */
+    }
+    50% {
+        color: #fdb416f8; /* Transición al segundo color a la mitad de la animación */
+    }
+    100% {
+        color: #971818; /* Regresa al primer color al final de la animación */
+    }
+}
+
+.navbar{
+    position: sticky;
+    padding: 0;
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(to right,#0D0D0D,#181717,#0D0D0D);
+    z-index: 1;
+}
+
+.menu .nav-item{
+    transition: .5s;
+}
+
+.menu .nav-item:hover{
+    background: #8e000068;
+}
+
+.menu .nav-item .nav-link{
+    color: aliceblue;
+    margin: 10px 40px;
+    transition: .2s;
+    font-size: 15px;
+}
+
+.menu .nav-item:hover .nav-link{
+    color: #fd474a;
+}
+
+#Hero{
+    width: 100%;
+    height: 100vh;
+    background: url("../img/fondo.png");
+    background-size: cover;
+}
+
+#Hero .cont-foto{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;   
+}
+
+#Hero .foto{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    margin-left: 150px;
+    background: url("../img/yo.png");
+    background-size: 100%;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: 0px 52px 33px 3px rgba(0,0,0,0.44);
+    -webkit-box-shadow: 0px 52px 33px 3px rgba(0,0,0,0.44);
+    -moz-box-shadow: 0px 52px 33px 3px rgba(0,0,0,0.44);
+}
+
+#Hero .deco-foto{
+    height: 400px;
+    width: 400px;
+    margin-left: 150px;
+    border-radius: 50%;
+    background: linear-gradient(#ed1c1cab, #df8106fd, #ff9735bb);
+    position: absolute;
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg); /* Girar 360 grados */
+    }
+}
+
+#Hero .texto{
+    position: relative;
+    display: flex;
+    justify-content: initial;
+    align-items: center;
+}
+
+
+#Hero h2{
+    background-image: linear-gradient(to right, #ED1C1C, #FF9635);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Righteous', cursive;
+    position: absolute;
+    margin-top: -220px;
+    z-index: 10;
+    animation: color-transition 4s linear infinite; /* Animación para la transición de colores */
+}
+
+@keyframes color-transition {
+    0% {
+        color: #971818; /* Comienza con el primer color */
+    }
+    50% {
+        color: #ff973585; /* Transición al segundo color a la mitad de la animación */
+    }
+    100% {
+        color: #971818; /* Regresa al primer color al final de la animación */
+    }
+}
+
+.nombre{
+    position: absolute;
+    font-size: var(--titulos);
+    background-image: linear-gradient(to right, white, transparent);
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+    font-family: 'Righteous', cursive;
+    z-index: 999;
+}
+
+#Hero .descripcion{
+    color: white;
+    font-size: var(--terciarios);
+    position: relative;
+    top: 120px;
+}
+
+#Hero .btn-primary{
+    position: absolute;
+    height: 50px;
+    width: 140px;
+    border-radius: 50px;
+    top: 450px;
+    background: #181717;
+    border: 4px solid #a71a1aa2;
+    transition: .4s;
+}
+
+#Hero .btn-primary a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#Hero .btn-primary:hover{
+    background: rgb(94, 18, 18);
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    margin: 550px 0 0 55px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    z-index: 999;
+}
+  
+.wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon span img {
+    width: 100%; /* Ajusta el ancho de los logotipos al 100% del espacio disponible en el círculo */
+    height: 100%; /* Ajusta la altura de los logotipos al 100% del espacio disponible en el círculo */
+    object-fit: contain; /* Mantiene la relación de aspecto de los logotipos */
+}
+  
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+  
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+  
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+    background: #0077B5;
+    color: #fff;
+}
+  
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #2d013a;
+    color: #fff;
+}
+  
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+    background: #25D366;
+    color: #fff;
+}
+
+.wrapper .github:hover span img {
+    content: url("../img/githubb.png");
+}
+  
+#perfil-estudios{
+    width: 100%;
+    height: 100%;
+    background: var(--color-principal);
+}
+
+.card{
+    background: #0d0d0d1f;
+    align-items: center;
+    width: 450px;
+    padding: 30px;
+    margin: 30px 0;
+    border: 0px;
+}
+
+.card img{
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+}
+
+section {
+    padding: 60px 0;
+    overflow: hidden;
+  }
+  
+  .section-title {
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    color: #191919;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .section-title span {
+    position: absolute;
+    top: 30px;
+    color: #f4f4f4;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 52px;
+    text-transform: uppercase;
+    line-height: 0;
+  }
+  
+  .section-title p {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+  }
+  
+  @media (max-width: 575px) {
+    .section-title h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+  
+    .section-title span {
+      font-size: 38px;
+    }
+  }
+
+  .about .content h3 {
+    font-weight: 600;
+    font-size: 26px;
+  }
+  
+  .about .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about .content ul li {
+    padding-bottom: 10px;
+  }
+  
+  .about .content ul i {
+    font-size: 20px;
+    padding-right: 4px;
+    color: #cc1616;
+  }
+  
+  .about .content p:last-child {
+    margin-bottom: 0;
+  }
